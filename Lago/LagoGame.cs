@@ -9,7 +9,7 @@ public abstract class LagoGame
     public abstract void Update(UpdateContext context);
     public abstract void Render(RenderContext context);
     
-    protected LagoGame(UpdateContext context)
+    protected LagoGame()
     {
         
     }
