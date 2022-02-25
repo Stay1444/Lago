@@ -8,8 +8,8 @@ public abstract class LagoGame
 {
     protected abstract void Update(UpdateContext context);
     protected abstract void Render(RenderContext context);
-    public virtual void OnLoad() { }
-    public virtual void OnUnload() { }
+    protected virtual void OnLoad() { }
+    protected virtual void OnUnload() { }
     protected LagoGame()
     {
         
