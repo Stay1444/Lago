@@ -6,12 +6,23 @@ namespace Lago;
 
 public abstract class LagoGame
 {
-    public abstract void Update(UpdateContext context);
-    public abstract void Render(RenderContext context);
-    
+    protected abstract void Update(UpdateContext context);
+    protected abstract void Render(RenderContext context);
+    public virtual void OnLoad() { }
+    public virtual void OnUnload() { }
     protected LagoGame()
     {
         
+    }
+
+    public void Run()
+    {
+        this.OnLoad();
+    }
+    
+    public void Stop()
+    {
+        this.OnUnload();   
     }
     
     
